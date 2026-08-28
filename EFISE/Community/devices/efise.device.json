@@ -1,0 +1,51 @@
+{
+  "$schema": "./mfdevice.schema.json",
+  "Info": {
+    "Label": "EFIS Baro",
+    "Type": "GAGAGU_FCU-EFIS",
+    "Author": "chegevarko1982",
+    "URL": "https://github.com/chegevarko1982",
+    "Version": "1.0.0"
+  },
+  "Config": {
+    "Pins": [],
+    "I2C": {
+      "Enabled": true,
+      "Addresses": [
+        "0x70",
+        "0x71"
+      ]
+    },
+    "Custom": {
+      "Enabled": true,
+      "Value": ""
+    }
+  },
+  "MessageTypes": [
+    {
+      "id": 0,
+      "label": "Baro Select",
+      "description": "$ 0 = inHg, 1 = hPa"
+    },
+    {
+      "id": 1,
+      "label": "Baro Value hPa",
+      "description": "$ four digits, e.g. 1013"
+    },
+    {
+      "id": 2,
+      "label": "Baro Value inHg",
+      "description": "$ four digits WITHOUT the point, e.g. 2992 for 29.92"
+    },
+    {
+      "id": 3,
+      "label": "Baro Mode",
+      "description": "$ 0 = QFE, 1 = QNH, 2 or 3 = STD"
+    },
+    {
+      "id": 19,
+      "label": "Light Test",
+      "description": "$ 0 = off, 1 = on"
+    }
+  ]
+}
