@@ -1047,6 +1047,17 @@ void OledMonitorPanel::updateDisplayBaro(void)
 {
     bool std = (baroMode == 2 || baroMode == 3);
 
+    /*
+      Both layouts below repaint the whole screen and return without going
+      through slideCells(), which is the only other place a wheel is stopped.
+      A wheel still turning would then go on blitting its cell over the new
+      screen from update(). That is not hypothetical: pulling STD makes the sim
+      send the value (-> 1013) and the mode together, so the last two cells roll
+      straight onto the "5td" and it reads "5tc3".
+    */
+    if (lightTestOn == 1 || std)
+        abortDrum(SCR_BARO);
+
     if (lightTestOn == 1) {
         setTCAChannel(TCA9548A_CHANNEL_BARO);
         oled->clearDisplay();
