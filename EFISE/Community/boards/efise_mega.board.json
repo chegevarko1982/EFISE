@@ -39,7 +39,7 @@
     "DelayAfterFirmwareUpdate": 0,
     "FirmwareBaseName": "efise_mega",
     "FirmwareExtension": "hex",
-    "LatestFirmwareVersion": "1.0.0",
+    "LatestFirmwareVersion": "1.0.1",
     "FriendlyName": "EFIS Baro (Mega)",
     "MobiFlightType": "Gagagu FCU/EFIS Mega",
     "ResetFirmwareFile": "reset.arduino_mega_1_0_2.hex",

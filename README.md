@@ -48,7 +48,7 @@ projects in separate repositories: a diff between them stays readable.
 | Message ids | 0, 1, 2, 3, 19 | the original firmware's numbering, which the MobiFlight project is bound to |
 
 `FirmwareBaseName` and `LatestFirmwareVersion` are *not* in that list — they only
-locate the firmware file, so they follow the build (`efise_mega`, `1.0.0`).
+locate the firmware file, so they follow the build (`efise_mega`, `1.0.1`).
 
 ## Messages
 
@@ -119,7 +119,7 @@ cell, and a rolling digit never escaping.
 ## Building
 
 ```bash
-VERSION=1.0.0 pio run -e efise_mega
+VERSION=1.0.1 pio run -e efise_mega
 ```
 
 MobiFlight looks for exactly `FirmwareBaseName` + `LatestFirmwareVersion` from
